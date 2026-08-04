@@ -140,24 +140,20 @@ proxies:
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬 SG 04
-  network: tcp
-  port: 10000
-  reality-opts:
-    public-key: xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU
-    short-id: 3b0b73e5
-  server: 140.245.50.174
-  servername: gateway.icloud.com
+- name: 🇸🇬 SG 04
+  network: ws
+  port: 443
+  server: 104.16.251.148
+  servername: hhlfy.twiladaphne.ndjp.net
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: af6904c1-4349-4448-8e99-0024824a0c33
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
 - name: 🇸🇬 SG 05
   network: ws
   port: 443
-  server: dx.mmhh.eu.cc
+  server: 104.17.144.235
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
