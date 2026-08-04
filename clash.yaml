@@ -1,9 +1,12 @@
-# Auto-generated public proxy profile. Do not use for sensitive traffic.
+# KRIZZIA VPN - lightweight live-tested profile
+# Generated automatically. Do not paste passwords or private data here.
 mixed-port: 7890
 allow-lan: false
 mode: rule
-log-level: warning
+log-level: info
 ipv6: false
+unified-delay: true
+tcp-concurrent: true
 proxies:
 - alterId: 0
   cipher: auto
@@ -41,20 +44,25 @@ proxies:
   cipher: auto
   name: 🇭🇰 HK 03
   network: tcp
-  port: 30807
-  server: v10.zgtfqs.click
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰 HK 04
-  network: tcp
   port: 30809
   server: v9.hdacd.com
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 HK 04
+  network: raw
+  port: 59750
+  reality-opts:
+    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
+    short-id: ''
+  server: 47.83.153.19
+  servername: www.amd.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
 - alterId: 0
   cipher: auto
   name: 🇭🇰 HK 05
@@ -64,61 +72,6 @@ proxies:
   type: vmess
   udp: true
   uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-- name: 🇭🇰 HK 06
-  password: BxceQaOe
-  port: 443
-  server: 119.246.1.143
-  skip-cert-verify: true
-  sni: t.me/ripaojiedian
-  type: trojan
-  udp: true
-- name: 🇭🇰 HK 07
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2🇨🇳
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇭🇰 HK 08
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: maES4RMEtsm5emBCixDRa6Y5GvmVwmwZNBL2G4Q03D4
-    short-id: 47de54e71fee3451
-  server: 38.207.177.236
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9c64064c-aaaf-449f-9344-77632fc9ff1c
-- client-fingerprint: chrome
-  name: 🇭🇰 HK 09
-  network: grpc
-  port: 444
-  reality-opts:
-    public-key: lxq7uAa7l0ozobBgTRrQIF_aCxDeJqZZFaNv8CFA9TQ
-    short-id: 8622176789abcdef
-  server: hk.vrsvpn.com
-  servername: web.max.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384
-- client-fingerprint: chrome
-  name: 🇭🇰 HK 10
-  network: grpc
-  port: 444
-  reality-opts:
-    public-key: lxq7uAa7l0ozobBgTRrQIF_aCxDeJqZZFaNv8CFA9TQ
-    short-id: 8622176789abcdef
-  server: 85.11.161.8
-  servername: web.max.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384
 - cipher: aes-128-gcm
   name: 🇯🇵 JP 01
   password: shadowsocks
@@ -156,46 +109,6 @@ proxies:
   type: vless
   udp: true
   uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-- name: 🇯🇵 JP 06
-  network: ws
-  port: 2087
-  server: 188.114.97.6
-  servername: mjtbknetmkhremge.ordak.qzz.io
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4311bd3f-4f66-4538-a624-221b87690b2c
-- name: 🇯🇵 JP 07
-  network: ws
-  port: 8880
-  server: 104.17.191.15
-  type: vless
-  udp: true
-  uuid: 812b1aeb-c6f7-43cb-8d8b-981711fea21a
-- name: 🇯🇵 JP 08
-  network: ws
-  port: 80
-  server: 172.111.146.64
-  type: vless
-  udp: true
-  uuid: 904f8ffa-4652-4076-8f2f-e586807840ec
-- name: 🇯🇵 JP 09
-  network: ws
-  port: 8880
-  server: 104.17.181.19
-  type: vless
-  udp: true
-  uuid: fe3b26ec-4bc0-464d-a7b9-2db72a89846e
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 JP 10
-  network: ws
-  port: 80
-  server: 168.138.43.75
-  type: vmess
-  udp: true
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
 - cipher: aes-256-gcm
   name: 🇸🇬 SG 01
   password: Y6R9pAtvxxzmGC
@@ -247,56 +160,6 @@ proxies:
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇸🇬 SG 06
-  network: ws
-  port: 443
-  server: 104.16.248.48
-  servername: hhlfy.twiladaphne.ndjp.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇸🇬 SG 07
-  network: ws
-  port: 443
-  server: 104.17.136.118
-  servername: support.zoom.us.yxls.eu.cc
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
-- name: 🇸🇬 SG 08
-  network: ws
-  port: 443
-  server: 104.19.35.8
-  servername: support.zoom.us.yxls.eu.cc
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
-- name: 🇸🇬 SG 09
-  network: ws
-  port: 443
-  server: 104.20.39.109
-  servername: support.zoom.us.yxls.eu.cc
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
-- name: 🇸🇬 SG 10
-  network: ws
-  port: 443
-  server: 104.25.244.217
-  servername: support.zoom.us.yxls.eu.cc
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
 - cipher: chacha20-ietf-poly1305
   name: 🇹🇼 TW 01
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
@@ -326,57 +189,6 @@ proxies:
   sni: https://t.me/oneclickvpnkeys
   type: hysteria2
 - cipher: chacha20-ietf-poly1305
-  name: 🇹🇼 TW 05
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-  port: 50099
-  server: r3mrcg00129437x.cybervena.com
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇹🇼 TW 06
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-  port: 50099
-  server: r3mrcg001287h3p.cybervena.com
-  type: ss
-  udp: true
-- name: 🇹🇼 TW 07
-  network: tcp
-  port: 10000
-  server: 60.249.101.13
-  type: vless
-  udp: true
-  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-- name: 🇹🇼 TW 08
-  network: ws
-  port: 443
-  server: 162.159.16.63
-  servername: learn00.evany.de5.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 29ca503d-e6b8-4509-b666-48133f450857
-- name: 🇹🇼 TW 09
-  network: ws
-  port: 8443
-  server: 172.64.35.32
-  servername: learn00.evany.de5.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 29ca503d-e6b8-4509-b666-48133f450857
-- name: 🇹🇼 TW 10
-  network: ws
-  port: 443
-  server: 104.155.124.198
-  servername: learn00.evany.de5.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 29ca503d-e6b8-4509-b666-48133f450857
-- cipher: chacha20-ietf-poly1305
   name: 🇺🇸 US 01
   password: G5p6ww4o67HB
   port: 8388
@@ -397,223 +209,97 @@ proxies:
   server: 173.244.56.9
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇺🇸 US 04
-  password: G5p6ww4o67HB
-  port: 8388
-  server: 108.181.0.177
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 05
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.167
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 06
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.170
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 07
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.168
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 08
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.236
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 09
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.160
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 10
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.169
-  type: ss
-  udp: true
 proxy-groups:
 - name: 💎 KRIZZIA VPN
   type: select
   proxies:
   - ⚡ AUTO FASTEST
   - 🌏 CHOOSE COUNTRY
-  - 🔎 MANUAL
-  - 🇵🇭 Philippines
-  - 🇭🇰 Hong Kong
-  - 🇯🇵 Japan
-  - 🇸🇬 Singapore
-  - 🇹🇼 Taiwan
-  - 🇺🇸 United States
+  - 🇵🇭 PH SERVERS
+  - 🇭🇰 HK SERVERS
+  - 🇯🇵 JP SERVERS
+  - 🇸🇬 SG SERVERS
+  - 🇹🇼 TW SERVERS
+  - 🇺🇸 US SERVERS
 - name: ⚡ AUTO FASTEST
   type: url-test
-  url: https://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 100
-  proxies: &id001
+  proxies:
   - 🇵🇭 PH 01
   - 🇭🇰 HK 01
   - 🇭🇰 HK 02
   - 🇭🇰 HK 03
   - 🇭🇰 HK 04
   - 🇭🇰 HK 05
-  - 🇭🇰 HK 06
-  - 🇭🇰 HK 07
-  - 🇭🇰 HK 08
-  - 🇭🇰 HK 09
-  - 🇭🇰 HK 10
   - 🇯🇵 JP 01
   - 🇯🇵 JP 02
   - 🇯🇵 JP 03
   - 🇯🇵 JP 04
   - 🇯🇵 JP 05
-  - 🇯🇵 JP 06
-  - 🇯🇵 JP 07
-  - 🇯🇵 JP 08
-  - 🇯🇵 JP 09
-  - 🇯🇵 JP 10
   - 🇸🇬 SG 01
   - 🇸🇬 SG 02
   - 🇸🇬 SG 03
   - 🇸🇬 SG 04
   - 🇸🇬 SG 05
-  - 🇸🇬 SG 06
-  - 🇸🇬 SG 07
-  - 🇸🇬 SG 08
-  - 🇸🇬 SG 09
-  - 🇸🇬 SG 10
   - 🇹🇼 TW 01
   - 🇹🇼 TW 02
   - 🇹🇼 TW 03
   - 🇹🇼 TW 04
-  - 🇹🇼 TW 05
-  - 🇹🇼 TW 06
-  - 🇹🇼 TW 07
-  - 🇹🇼 TW 08
-  - 🇹🇼 TW 09
-  - 🇹🇼 TW 10
   - 🇺🇸 US 01
   - 🇺🇸 US 02
   - 🇺🇸 US 03
-  - 🇺🇸 US 04
-  - 🇺🇸 US 05
-  - 🇺🇸 US 06
-  - 🇺🇸 US 07
-  - 🇺🇸 US 08
-  - 🇺🇸 US 09
-  - 🇺🇸 US 10
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 100
+  lazy: true
 - name: 🌏 CHOOSE COUNTRY
   type: select
   proxies:
-  - 🇵🇭 Philippines
-  - 🇭🇰 Hong Kong
-  - 🇯🇵 Japan
-  - 🇸🇬 Singapore
-  - 🇹🇼 Taiwan
-  - 🇺🇸 United States
-- name: 🔎 MANUAL
+  - 🇵🇭 PH SERVERS
+  - 🇭🇰 HK SERVERS
+  - 🇯🇵 JP SERVERS
+  - 🇸🇬 SG SERVERS
+  - 🇹🇼 TW SERVERS
+  - 🇺🇸 US SERVERS
+- name: 🇵🇭 PH SERVERS
   type: select
-  proxies: *id001
-- name: 🇵🇭 Philippines
-  type: url-test
-  url: https://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 100
   proxies:
   - 🇵🇭 PH 01
-- name: 🇭🇰 Hong Kong
-  type: url-test
-  url: https://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 100
+- name: 🇭🇰 HK SERVERS
+  type: select
   proxies:
   - 🇭🇰 HK 01
   - 🇭🇰 HK 02
   - 🇭🇰 HK 03
   - 🇭🇰 HK 04
   - 🇭🇰 HK 05
-  - 🇭🇰 HK 06
-  - 🇭🇰 HK 07
-  - 🇭🇰 HK 08
-  - 🇭🇰 HK 09
-  - 🇭🇰 HK 10
-- name: 🇯🇵 Japan
-  type: url-test
-  url: https://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 100
+- name: 🇯🇵 JP SERVERS
+  type: select
   proxies:
   - 🇯🇵 JP 01
   - 🇯🇵 JP 02
   - 🇯🇵 JP 03
   - 🇯🇵 JP 04
   - 🇯🇵 JP 05
-  - 🇯🇵 JP 06
-  - 🇯🇵 JP 07
-  - 🇯🇵 JP 08
-  - 🇯🇵 JP 09
-  - 🇯🇵 JP 10
-- name: 🇸🇬 Singapore
-  type: url-test
-  url: https://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 100
+- name: 🇸🇬 SG SERVERS
+  type: select
   proxies:
   - 🇸🇬 SG 01
   - 🇸🇬 SG 02
   - 🇸🇬 SG 03
   - 🇸🇬 SG 04
   - 🇸🇬 SG 05
-  - 🇸🇬 SG 06
-  - 🇸🇬 SG 07
-  - 🇸🇬 SG 08
-  - 🇸🇬 SG 09
-  - 🇸🇬 SG 10
-- name: 🇹🇼 Taiwan
-  type: url-test
-  url: https://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 100
+- name: 🇹🇼 TW SERVERS
+  type: select
   proxies:
   - 🇹🇼 TW 01
   - 🇹🇼 TW 02
   - 🇹🇼 TW 03
   - 🇹🇼 TW 04
-  - 🇹🇼 TW 05
-  - 🇹🇼 TW 06
-  - 🇹🇼 TW 07
-  - 🇹🇼 TW 08
-  - 🇹🇼 TW 09
-  - 🇹🇼 TW 10
-- name: 🇺🇸 United States
-  type: url-test
-  url: https://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 100
+- name: 🇺🇸 US SERVERS
+  type: select
   proxies:
   - 🇺🇸 US 01
   - 🇺🇸 US 02
   - 🇺🇸 US 03
-  - 🇺🇸 US 04
-  - 🇺🇸 US 05
-  - 🇺🇸 US 06
-  - 🇺🇸 US 07
-  - 🇺🇸 US 08
-  - 🇺🇸 US 09
-  - 🇺🇸 US 10
 rules:
 - MATCH,💎 KRIZZIA VPN
