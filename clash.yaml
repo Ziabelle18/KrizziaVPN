@@ -8,6 +8,15 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 proxies:
+- alterId: 0
+  cipher: auto
+  name: 🇵🇭 PH 01
+  network: ws
+  port: 80
+  server: 61.245.11.60
+  type: vmess
+  udp: true
+  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇭🇰 HK 01
@@ -40,27 +49,22 @@ proxies:
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- cipher: chacha20-ietf
+- alterId: 2
+  cipher: auto
   name: 🇭🇰 HK 04
+  network: tcp
+  port: 30809
+  server: v9.hdacd.com
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- cipher: chacha20-ietf
+  name: 🇭🇰 HK 05
   password: asd123456
   port: 8388
   server: 103.36.91.32
   type: ss
   udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇭🇰 HK 05
-  network: raw
-  port: 59750
-  reality-opts:
-    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
-    short-id: ''
-  server: 47.83.153.19
-  servername: www.amd.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
 - cipher: aes-128-gcm
   name: 🇯🇵 JP 01
   password: shadowsocks
@@ -122,7 +126,7 @@ proxies:
 - name: 🇸🇬 SG 03
   network: ws
   port: 443
-  server: 104.16.251.148
+  server: 104.16.158.249
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
@@ -132,6 +136,16 @@ proxies:
 - name: 🇸🇬 SG 04
   network: ws
   port: 443
+  server: 104.16.248.48
+  servername: hhlfy.twiladaphne.ndjp.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+- name: 🇸🇬 SG 05
+  network: ws
+  port: 443
   server: 104.17.144.235
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
@@ -139,20 +153,6 @@ proxies:
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬 SG 05
-  network: tcp
-  port: 10000
-  reality-opts:
-    public-key: xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU
-    short-id: 3b0b73e5
-  server: 140.245.50.174
-  servername: gateway.icloud.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: af6904c1-4349-4448-8e99-0024824a0c33
 - cipher: chacha20-ietf-poly1305
   name: 🇹🇼 TW 01
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
@@ -167,20 +167,20 @@ proxies:
   server: r3mrcg00129437x.cybervena.com
   type: ss
   udp: true
-- name: 🇹🇼 TW 03
+- cipher: chacha20-ietf-poly1305
+  name: 🇹🇼 TW 03
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  port: 50099
+  server: r3mrcg001286ek2.cybervena.com
+  type: ss
+  udp: true
+- name: 🇹🇼 TW 04
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 103.115.109.49
   skip-cert-verify: true
   sni: https://t.me/oneclickvpnkeys
   type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: 🇹🇼 TW 04
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-  port: 50099
-  server: r3mrcg00129437x.cybervena.com
-  type: ss
-  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇺🇸 US 01
   password: G5p6ww4o67HB
@@ -208,6 +208,7 @@ proxy-groups:
   proxies:
   - ⚡ AUTO FASTEST
   - 🌏 CHOOSE COUNTRY
+  - 🇵🇭 PH SERVERS
   - 🇭🇰 HK SERVERS
   - 🇯🇵 JP SERVERS
   - 🇸🇬 SG SERVERS
@@ -216,6 +217,7 @@ proxy-groups:
 - name: ⚡ AUTO FASTEST
   type: url-test
   proxies:
+  - 🇵🇭 PH 01
   - 🇭🇰 HK 01
   - 🇭🇰 HK 02
   - 🇭🇰 HK 03
@@ -245,11 +247,16 @@ proxy-groups:
 - name: 🌏 CHOOSE COUNTRY
   type: select
   proxies:
+  - 🇵🇭 PH SERVERS
   - 🇭🇰 HK SERVERS
   - 🇯🇵 JP SERVERS
   - 🇸🇬 SG SERVERS
   - 🇹🇼 TW SERVERS
   - 🇺🇸 US SERVERS
+- name: 🇵🇭 PH SERVERS
+  type: select
+  proxies:
+  - 🇵🇭 PH 01
 - name: 🇭🇰 HK SERVERS
   type: select
   proxies:
