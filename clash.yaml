@@ -8,18 +8,18 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- alterId: 0
+- alterId: 2
   cipher: auto
-  name: 🇵🇭 PH 01
-  network: ws
-  port: 80
-  server: 61.245.11.60
+  name: 🇭🇰 HK 01
+  network: tcp
+  port: 30807
+  server: v10.hdacd.com
   type: vmess
   udp: true
-  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 HK 01
+  name: 🇭🇰 HK 02
   network: tcp
   port: 59750
   reality-opts:
@@ -31,15 +31,6 @@ proxies:
   type: vless
   udp: true
   uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰 HK 02
-  network: tcp
-  port: 30807
-  server: v10.hdacd.com
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 2
   cipher: auto
   name: 🇭🇰 HK 03
@@ -96,12 +87,12 @@ proxies:
   udp: true
   uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
 - name: 🇯🇵 JP 05
-  network: tcp
-  port: 47878
-  server: 152.69.195.67
+  network: ws
+  port: 80
+  server: 172.111.146.64
   type: vless
   udp: true
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+  uuid: 904f8ffa-4652-4076-8f2f-e586807840ec
 - cipher: aes-256-gcm
   name: 🇸🇬 SG 01
   password: Y6R9pAtvxxzmGC
@@ -146,7 +137,7 @@ proxies:
 - name: 🇸🇬 SG 05
   network: ws
   port: 443
-  server: 104.17.144.235
+  server: 104.16.251.148
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
@@ -174,13 +165,13 @@ proxies:
   server: r3mrcg001286ek2.cybervena.com
   type: ss
   udp: true
-- name: 🇹🇼 TW 04
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: https://t.me/oneclickvpnkeys
-  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: 🇹🇼 TW 04
+  password: 7b56aeaa-8e2d-4bdf-b1d7-233ecca15f56
+  port: 50099
+  server: namrcg001640lrm.cybervena.com
+  type: ss
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇺🇸 US 01
   password: G5p6ww4o67HB
@@ -208,7 +199,6 @@ proxy-groups:
   proxies:
   - ⚡ AUTO FASTEST
   - 🌏 CHOOSE COUNTRY
-  - 🇵🇭 PH SERVERS
   - 🇭🇰 HK SERVERS
   - 🇯🇵 JP SERVERS
   - 🇸🇬 SG SERVERS
@@ -217,7 +207,6 @@ proxy-groups:
 - name: ⚡ AUTO FASTEST
   type: url-test
   proxies:
-  - 🇵🇭 PH 01
   - 🇭🇰 HK 01
   - 🇭🇰 HK 02
   - 🇭🇰 HK 03
@@ -247,16 +236,11 @@ proxy-groups:
 - name: 🌏 CHOOSE COUNTRY
   type: select
   proxies:
-  - 🇵🇭 PH SERVERS
   - 🇭🇰 HK SERVERS
   - 🇯🇵 JP SERVERS
   - 🇸🇬 SG SERVERS
   - 🇹🇼 TW SERVERS
   - 🇺🇸 US SERVERS
-- name: 🇵🇭 PH SERVERS
-  type: select
-  proxies:
-  - 🇵🇭 PH 01
 - name: 🇭🇰 HK SERVERS
   type: select
   proxies:
