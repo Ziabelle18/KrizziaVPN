@@ -31,18 +31,9 @@ proxies:
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰 HK 03
-  network: tcp
-  port: 30809
-  server: v9.hdacd.com
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 HK 04
+  name: 🇭🇰 HK 03
   network: raw
   port: 59750
   reality-opts:
@@ -56,13 +47,21 @@ proxies:
   uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 HK 05
+  name: 🇭🇰 HK 04
   network: ws
   port: 36703
   server: 47.244.120.197
   type: vmess
   udp: true
   uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+- name: 🇭🇰 HK 05
+  password: BxceQaOe
+  port: 443
+  server: 119.246.1.143
+  skip-cert-verify: true
+  sni: t.me/ripaojiedian
+  type: trojan
+  udp: true
 - cipher: aes-128-gcm
   name: 🇯🇵 JP 01
   password: shadowsocks
