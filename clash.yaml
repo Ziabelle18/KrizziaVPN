@@ -8,15 +8,6 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 🇵🇭 PH 01
-  network: ws
-  port: 80
-  server: 61.245.11.60
-  type: vmess
-  udp: true
-  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇭🇰 HK 01
@@ -44,15 +35,6 @@ proxies:
   cipher: auto
   name: 🇭🇰 HK 03
   network: tcp
-  port: 30807
-  server: v10.zgtfqs.click
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰 HK 04
-  network: tcp
   port: 30809
   server: v9.hdacd.com
   type: vmess
@@ -60,7 +42,7 @@ proxies:
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 HK 05
+  name: 🇭🇰 HK 04
   network: raw
   port: 59750
   reality-opts:
@@ -72,6 +54,15 @@ proxies:
   type: vless
   udp: true
   uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 HK 05
+  network: ws
+  port: 36703
+  server: 47.244.120.197
+  type: vmess
+  udp: true
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
 - cipher: aes-128-gcm
   name: 🇯🇵 JP 01
   password: shadowsocks
@@ -102,15 +93,13 @@ proxies:
   type: vmess
   udp: true
   uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 JP 05
-  network: ws
-  port: 80
-  server: 168.138.43.75
-  type: vmess
+- name: 🇯🇵 JP 05
+  network: tcp
+  port: 47878
+  server: 152.69.195.67
+  type: vless
   udp: true
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
 - cipher: aes-256-gcm
   name: 🇸🇬 SG 01
   password: Y6R9pAtvxxzmGC
@@ -118,9 +107,19 @@ proxies:
   server: 103.106.229.69
   type: ss
   udp: true
+- name: 🇸🇬 SG 02
+  network: ws
+  port: 443
+  server: support.zoom.us
+  servername: support.zoom.us.yxls.eu.cc
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: 🇸🇬 SG 02
+  name: 🇸🇬 SG 03
   network: tcp
   port: 8899
   reality-opts:
@@ -132,17 +131,17 @@ proxies:
   type: vless
   udp: true
   uuid: 0c9839aa-c64f-4791-9137-420432605987
-- name: 🇸🇬 SG 03
+- name: 🇸🇬 SG 04
   network: ws
   port: 443
-  server: 104.16.248.48
+  server: 104.16.158.249
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇸🇬 SG 04
+- name: 🇸🇬 SG 05
   network: ws
   port: 443
   server: 104.17.22.240
@@ -152,20 +151,6 @@ proxies:
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬 SG 05
-  network: tcp
-  port: 10000
-  reality-opts:
-    public-key: xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU
-    short-id: 3b0b73e5
-  server: 140.245.50.174
-  servername: gateway.icloud.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: af6904c1-4349-4448-8e99-0024824a0c33
 - cipher: chacha20-ietf-poly1305
   name: 🇹🇼 TW 01
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
@@ -221,7 +206,6 @@ proxy-groups:
   proxies:
   - ⚡ AUTO FASTEST
   - 🌏 CHOOSE COUNTRY
-  - 🇵🇭 PH SERVERS
   - 🇭🇰 HK SERVERS
   - 🇯🇵 JP SERVERS
   - 🇸🇬 SG SERVERS
@@ -230,7 +214,6 @@ proxy-groups:
 - name: ⚡ AUTO FASTEST
   type: url-test
   proxies:
-  - 🇵🇭 PH 01
   - 🇭🇰 HK 01
   - 🇭🇰 HK 02
   - 🇭🇰 HK 03
@@ -260,16 +243,11 @@ proxy-groups:
 - name: 🌏 CHOOSE COUNTRY
   type: select
   proxies:
-  - 🇵🇭 PH SERVERS
   - 🇭🇰 HK SERVERS
   - 🇯🇵 JP SERVERS
   - 🇸🇬 SG SERVERS
   - 🇹🇼 TW SERVERS
   - 🇺🇸 US SERVERS
-- name: 🇵🇭 PH SERVERS
-  type: select
-  proxies:
-  - 🇵🇭 PH 01
 - name: 🇭🇰 HK SERVERS
   type: select
   proxies:
