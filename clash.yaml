@@ -8,6 +8,14 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 proxies:
+- name: 🇵🇭 PH 01
+  password: 7e70223b-f331-41d5-9313-02b8d2df2885
+  port: 20013
+  server: d3.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇭🇰 HK 01
@@ -49,12 +57,13 @@ proxies:
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- cipher: chacha20-ietf
-  name: 🇭🇰 HK 05
-  password: asd123456
-  port: 8388
-  server: 103.141.221.124
-  type: ss
+- name: 🇭🇰 HK 05
+  password: 7e70223b-f331-41d5-9313-02b8d2df2885
+  port: 20098
+  server: 45.67.201.210
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
   udp: true
 - cipher: aes-128-gcm
   name: 🇯🇵 JP 01
@@ -102,31 +111,7 @@ proxies:
   server: 103.106.229.69
   type: ss
   udp: true
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: 🇸🇬 SG 02
-  network: tcp
-  port: 8899
-  reality-opts:
-    public-key: 4ciiQdZe4F8wyoRKpNzW5xwmQzGyIJnlPHrK70iU6DQ
-    short-id: f0cce996
-  server: 168.138.166.89
-  servername: www.lovelive-anime.jp
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0c9839aa-c64f-4791-9137-420432605987
-- name: 🇸🇬 SG 03
-  network: ws
-  port: 443
-  server: 104.16.248.48
-  servername: hhlfy.twiladaphne.ndjp.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇸🇬 SG 04
+- name: 🇸🇬 SG 02
   network: ws
   port: 443
   server: 104.17.144.235
@@ -136,9 +121,19 @@ proxies:
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+- name: 🇸🇬 SG 03
+  network: ws
+  port: 443
+  server: 104.17.22.240
+  servername: hhlfy.twiladaphne.ndjp.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬 SG 05
+  name: 🇸🇬 SG 04
   network: tcp
   port: 10000
   reality-opts:
@@ -150,6 +145,16 @@ proxies:
   type: vless
   udp: true
   uuid: af6904c1-4349-4448-8e99-0024824a0c33
+- name: 🇸🇬 SG 05
+  network: ws
+  port: 443
+  server: 162.159.44.195
+  servername: hhlfy.twiladaphne.ndjp.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
 - cipher: chacha20-ietf-poly1305
   name: 🇹🇼 TW 01
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
@@ -205,6 +210,7 @@ proxy-groups:
   proxies:
   - ⚡ AUTO FASTEST
   - 🌏 CHOOSE COUNTRY
+  - 🇵🇭 PH SERVERS
   - 🇭🇰 HK SERVERS
   - 🇯🇵 JP SERVERS
   - 🇸🇬 SG SERVERS
@@ -213,6 +219,7 @@ proxy-groups:
 - name: ⚡ AUTO FASTEST
   type: url-test
   proxies:
+  - 🇵🇭 PH 01
   - 🇭🇰 HK 01
   - 🇭🇰 HK 02
   - 🇭🇰 HK 03
@@ -242,11 +249,16 @@ proxy-groups:
 - name: 🌏 CHOOSE COUNTRY
   type: select
   proxies:
+  - 🇵🇭 PH SERVERS
   - 🇭🇰 HK SERVERS
   - 🇯🇵 JP SERVERS
   - 🇸🇬 SG SERVERS
   - 🇹🇼 TW SERVERS
   - 🇺🇸 US SERVERS
+- name: 🇵🇭 PH SERVERS
+  type: select
+  proxies:
+  - 🇵🇭 PH 01
 - name: 🇭🇰 HK SERVERS
   type: select
   proxies:
