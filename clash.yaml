@@ -40,27 +40,21 @@ proxies:
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
+- alterId: 2
+  cipher: auto
   name: 🇭🇰 HK 04
-  network: raw
-  port: 59750
-  reality-opts:
-    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
-    short-id: ''
-  server: 47.83.153.19
-  servername: www.amd.com
-  tls: true
-  type: vless
+  network: tcp
+  port: 30809
+  server: v9.hdacd.com
+  type: vmess
   udp: true
-  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
-- name: 🇭🇰 HK 05
-  password: BxceQaOe
-  port: 443
-  server: 119.246.1.143
-  skip-cert-verify: true
-  sni: t.me/ripaojiedian
-  type: trojan
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- cipher: chacha20-ietf
+  name: 🇭🇰 HK 05
+  password: asd123456
+  port: 8388
+  server: 103.141.221.101
+  type: ss
   udp: true
 - cipher: aes-128-gcm
   name: 🇯🇵 JP 01
