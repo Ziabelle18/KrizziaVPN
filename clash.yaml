@@ -17,14 +17,6 @@ proxies:
   type: vmess
   udp: true
   uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
-- name: 🇵🇭 PH 02
-  password: smart@hkteVBi9aMFp-veBGU72OSCx
-  port: 21525
-  server: z-hk1.251313.xyz
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇭🇰 HK 01
@@ -57,13 +49,15 @@ proxies:
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- cipher: chacha20-ietf
+- alterId: 2
+  cipher: auto
   name: 🇭🇰 HK 04
-  password: asd123456
-  port: 8388
-  server: 103.141.221.101
-  type: ss
+  network: tcp
+  port: 30809
+  server: v9.hdacd.com
+  type: vmess
   udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇭🇰 HK 05
@@ -227,7 +221,6 @@ proxy-groups:
   type: url-test
   proxies:
   - 🇵🇭 PH 01
-  - 🇵🇭 PH 02
   - 🇭🇰 HK 01
   - 🇭🇰 HK 02
   - 🇭🇰 HK 03
@@ -267,7 +260,6 @@ proxy-groups:
   type: select
   proxies:
   - 🇵🇭 PH 01
-  - 🇵🇭 PH 02
 - name: 🇭🇰 HK SERVERS
   type: select
   proxies:
