@@ -8,6 +8,15 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 proxies:
+- alterId: 0
+  cipher: auto
+  name: 🇵🇭 PH 01
+  network: ws
+  port: 80
+  server: 61.245.11.60
+  type: vmess
+  udp: true
+  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇭🇰 HK 01
@@ -93,15 +102,14 @@ proxies:
   type: vmess
   udp: true
   uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 JP 05
-  network: ws
-  port: 80
-  server: 172.111.146.64
-  type: vmess
+- name: 🇯🇵 JP 05
+  password: tsuchiya
+  port: 443
+  server: aa.ccmusic.jp
+  skip-cert-verify: false
+  sni: ''
+  type: trojan
   udp: true
-  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
 - cipher: aes-256-gcm
   name: 🇸🇬 SG 01
   password: Y6R9pAtvxxzmGC
@@ -112,7 +120,7 @@ proxies:
 - name: 🇸🇬 SG 02
   network: ws
   port: 443
-  server: 104.16.158.249
+  server: 104.16.251.148
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
@@ -120,16 +128,6 @@ proxies:
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
 - name: 🇸🇬 SG 03
-  network: ws
-  port: 443
-  server: 104.16.248.48
-  servername: hhlfy.twiladaphne.ndjp.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇸🇬 SG 04
   network: ws
   port: 443
   server: 104.17.144.235
@@ -141,7 +139,7 @@ proxies:
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬 SG 05
+  name: 🇸🇬 SG 04
   network: tcp
   port: 10000
   reality-opts:
@@ -153,6 +151,16 @@ proxies:
   type: vless
   udp: true
   uuid: af6904c1-4349-4448-8e99-0024824a0c33
+- name: 🇸🇬 SG 05
+  network: ws
+  port: 443
+  server: 172.67.185.178
+  servername: hhlfy.twiladaphne.ndjp.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
 - cipher: chacha20-ietf-poly1305
   name: 🇹🇼 TW 01
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
@@ -195,11 +203,11 @@ proxies:
   server: 173.244.56.6
   type: ss
   udp: true
-- cipher: aes-128-gcm
+- cipher: chacha20-ietf-poly1305
   name: 🇺🇸 US 03
-  password: shadowsocks
-  port: 443
-  server: 173.244.56.9
+  password: G5p6ww4o67HB
+  port: 8388
+  server: 108.181.0.177
   type: ss
   udp: true
 proxy-groups:
@@ -208,6 +216,7 @@ proxy-groups:
   proxies:
   - ⚡ AUTO FASTEST
   - 🌏 CHOOSE COUNTRY
+  - 🇵🇭 PH SERVERS
   - 🇭🇰 HK SERVERS
   - 🇯🇵 JP SERVERS
   - 🇸🇬 SG SERVERS
@@ -216,6 +225,7 @@ proxy-groups:
 - name: ⚡ AUTO FASTEST
   type: url-test
   proxies:
+  - 🇵🇭 PH 01
   - 🇭🇰 HK 01
   - 🇭🇰 HK 02
   - 🇭🇰 HK 03
@@ -245,11 +255,16 @@ proxy-groups:
 - name: 🌏 CHOOSE COUNTRY
   type: select
   proxies:
+  - 🇵🇭 PH SERVERS
   - 🇭🇰 HK SERVERS
   - 🇯🇵 JP SERVERS
   - 🇸🇬 SG SERVERS
   - 🇹🇼 TW SERVERS
   - 🇺🇸 US SERVERS
+- name: 🇵🇭 PH SERVERS
+  type: select
+  proxies:
+  - 🇵🇭 PH 01
 - name: 🇭🇰 HK SERVERS
   type: select
   proxies:
