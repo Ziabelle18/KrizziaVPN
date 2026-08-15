@@ -17,16 +17,29 @@ proxies:
   type: vmess
   udp: true
   uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
-- cipher: aes-256-gcm
-  name: 🇵🇭 PH 02
-  password: kDWvXYZoTBcGkC4
-  port: 8882
-  server: 149.104.109.252
-  type: ss
+- name: 🇵🇭 PH 02
+  password: 7e70223b-f331-41d5-9313-02b8d2df2885
+  port: 20013
+  server: 45.67.201.210
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
   udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 HK 01
+  network: ws
+  port: 443
+  server: n1747624260.4u9ma.icu
+  servername: n1747624260.4u9ma.icu
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: eee8cb72-7eab-4034-a308-ed06cb07e003
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 HK 01
+  name: 🇭🇰 HK 02
   network: tcp
   port: 59750
   reality-opts:
@@ -40,35 +53,31 @@ proxies:
   uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
 - alterId: 2
   cipher: auto
-  name: 🇭🇰 HK 02
+  name: 🇭🇰 HK 03
   network: tcp
   port: 30807
   server: v10.hdacd.com
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- cipher: rc4-md5
-  name: 🇭🇰 HK 03
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 138.199.42.68
-  type: ss
-  udp: true
-- alterId: 2
+- alterId: 0
   cipher: auto
   name: 🇭🇰 HK 04
-  network: tcp
-  port: 30807
-  server: v10.zgtfqs.click
+  network: ws
+  port: 443
+  server: n1747624260.4u9ma.icu
+  servername: ''
+  skip-cert-verify: false
+  tls: true
   type: vmess
   udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  uuid: eee8cb72-7eab-4034-a308-ed06cb07e003
 - alterId: 2
   cipher: auto
   name: 🇭🇰 HK 05
   network: tcp
-  port: 30809
-  server: v9.hdacd.com
+  port: 30807
+  server: v10.zgtfqs.click
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
@@ -167,27 +176,29 @@ proxies:
   sni: https://t.me/oneclickvpnkeys
   type: hysteria2
 - name: 🇹🇼 TW 02
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
+  password: 7e70223b-f331-41d5-9313-02b8d2df2885
+  port: 20045
+  server: 45.67.201.210
   skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world
-  type: hysteria2
+  sni: tw.catxstar.com
+  type: trojan
+  udp: true
 - name: 🇹🇼 TW 03
-  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
-  port: 20025
-  server: hkdcrtc-e.catcat321.com
+  password: 7e70223b-f331-41d5-9313-02b8d2df2885
+  port: 20087
+  server: 45.67.201.210
   skip-cert-verify: true
   sni: tw.catxstar.com
   type: trojan
   udp: true
 - name: 🇹🇼 TW 04
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
+  password: 7e70223b-f331-41d5-9313-02b8d2df2885
+  port: 20096
+  server: 45.67.201.210
   skip-cert-verify: true
-  sni: ''
-  type: hysteria2
+  sni: tw.catxstar.com
+  type: trojan
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇺🇸 US 01
   password: G5p6ww4o67HB
