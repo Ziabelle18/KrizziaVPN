@@ -168,14 +168,21 @@ proxies:
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇹🇼 TW 01
+- cipher: chacha20-ietf-poly1305
+  name: 🇹🇼 TW 01
+  password: RSo52SbxW40r
+  port: 8388
+  server: 108.181.57.93
+  type: ss
+  udp: true
+- name: 🇹🇼 TW 02
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 103.115.109.49
   skip-cert-verify: true
   sni: https://t.me/oneclickvpnkeys
   type: hysteria2
-- name: 🇹🇼 TW 02
+- name: 🇹🇼 TW 03
   password: 7e70223b-f331-41d5-9313-02b8d2df2885
   port: 20045
   server: 45.67.201.210
@@ -183,17 +190,9 @@ proxies:
   sni: tw.catxstar.com
   type: trojan
   udp: true
-- name: 🇹🇼 TW 03
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20087
-  server: 45.67.201.210
-  skip-cert-verify: true
-  sni: tw.catxstar.com
-  type: trojan
-  udp: true
 - name: 🇹🇼 TW 04
   password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20096
+  port: 20087
   server: 45.67.201.210
   skip-cert-verify: true
   sni: tw.catxstar.com
