@@ -111,25 +111,16 @@ proxies:
   type: vmess
   udp: true
   uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
-- name: 🇯🇵 JP 05
-  password: tsuchiya
-  port: 443
-  server: 161.34.39.108
-  skip-cert-verify: false
-  sni: aa.ccmusic.jp
-  type: trojan
-  udp: true
-- name: 🇸🇬 SG 01
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 JP 05
   network: ws
-  port: 443
-  server: wasmer-earth.jzy88.top
-  servername: wasmer-earth.jzy88.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
+  port: 80
+  server: 172.111.146.64
+  type: vmess
   udp: true
-  uuid: 60156344-dbc3-4614-8177-fd337539a473
-- name: 🇸🇬 SG 02
+  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
+- name: 🇸🇬 SG 01
   network: ws
   port: 443
   server: 104.16.158.249
@@ -139,7 +130,7 @@ proxies:
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇸🇬 SG 03
+- name: 🇸🇬 SG 02
   network: ws
   port: 443
   server: 104.16.248.48
@@ -149,7 +140,7 @@ proxies:
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇸🇬 SG 04
+- name: 🇸🇬 SG 03
   network: ws
   port: 443
   server: 104.16.251.148
@@ -159,7 +150,7 @@ proxies:
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇸🇬 SG 05
+- name: 🇸🇬 SG 04
   network: ws
   port: 443
   server: 104.17.144.235
@@ -169,6 +160,13 @@ proxies:
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+- name: 🇸🇬 SG 05
+  network: ws
+  port: 8880
+  server: 104.17.191.15
+  type: vless
+  udp: true
+  uuid: adcce8be-9de7-41bd-abcd-52939cec108b
 - name: 🇹🇼 TW 01
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -200,25 +198,28 @@ proxies:
   sni: tw.catxstar.com
   type: trojan
   udp: true
+- name: 🇺🇸 US 01
+  network: ws
+  port: 443
+  server: wasmer-earth.jzy88.top
+  servername: wasmer-earth.jzy88.top
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 60156344-dbc3-4614-8177-fd337539a473
 - cipher: chacha20-ietf-poly1305
-  name: 🇺🇸 US 01
+  name: 🇺🇸 US 02
   password: G5p6ww4o67HB
   port: 8388
   server: 108.181.118.10
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 🇺🇸 US 02
-  password: shadowsocks
-  port: 443
-  server: 173.244.56.6
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
   name: 🇺🇸 US 03
   password: shadowsocks
   port: 443
-  server: 173.244.56.9
+  server: 173.244.56.6
   type: ss
   udp: true
 proxy-groups:
