@@ -8,46 +8,25 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: 🇵🇭 PH 01
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20013
-  server: 45.67.201.210
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
+- cipher: aes-256-gcm
+  name: 🇵🇭 PH 01
+  password: kDWvXYZoTBcGkC4
+  port: 8882
+  server: 149.104.109.252
+  type: ss
   udp: true
-- name: 🇵🇭 PH 02
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20063
-  server: 45.67.201.210
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-  udp: true
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰 HK 01
-  network: tcp
-  port: 30807
-  server: v10.hdacd.com
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 HK 02
+  name: 🇵🇭 PH 02
   network: ws
-  port: 443
-  server: n1747624260.4u9ma.icu
-  servername: ''
-  skip-cert-verify: false
-  tls: true
+  port: 80
+  server: 61.245.11.60
   type: vmess
   udp: true
-  uuid: eee8cb72-7eab-4034-a308-ed06cb07e003
+  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 HK 03
+  name: 🇭🇰 HK 01
   network: tcp
   port: 59750
   reality-opts:
@@ -61,19 +40,42 @@ proxies:
   uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
 - alterId: 2
   cipher: auto
-  name: 🇭🇰 HK 04
+  name: 🇭🇰 HK 02
+  network: tcp
+  port: 30807
+  server: v10.hdacd.com
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰 HK 03
   network: tcp
   port: 30807
   server: v10.zgtfqs.click
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 HK 04
+  network: raw
+  port: 59750
+  reality-opts:
+    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
+    short-id: ''
+  server: 47.83.153.19
+  servername: www.amd.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
 - name: 🇭🇰 HK 05
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20046
-  server: 45.67.201.210
+  password: BxceQaOe
+  port: 443
+  server: 119.246.1.143
   skip-cert-verify: true
-  sni: hk.catxstar.com
+  sni: t.me/ripaojiedian
   type: trojan
   udp: true
 - cipher: aes-128-gcm
@@ -137,27 +139,31 @@ proxies:
 - name: 🇸🇬 SG 03
   network: ws
   port: 443
-  server: 104.16.251.148
+  server: 104.17.22.240
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇸🇬 SG 04
-  network: ws
-  port: 443
-  server: 104.17.144.235
-  servername: hhlfy.twiladaphne.ndjp.net
-  skip-cert-verify: false
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬 SG 04
+  network: tcp
+  port: 10000
+  reality-opts:
+    public-key: xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU
+    short-id: 3b0b73e5
+  server: 140.245.50.174
+  servername: gateway.icloud.com
   tls: true
   type: vless
   udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  uuid: af6904c1-4349-4448-8e99-0024824a0c33
 - name: 🇸🇬 SG 05
   network: ws
   port: 443
-  server: 104.17.22.240
+  server: 172.67.185.178
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
@@ -180,22 +186,22 @@ proxies:
   type: vmess
   udp: true
   uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-- name: 🇹🇼 TW 03
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20045
-  server: 45.67.201.210
-  skip-cert-verify: true
-  sni: tw.catxstar.com
-  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼 TW 03
+  network: raw
+  port: 35034
+  server: 165.154.195.38
+  type: vmess
   udp: true
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
 - name: 🇹🇼 TW 04
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20087
-  server: 45.67.201.210
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
   skip-cert-verify: true
-  sni: tw.catxstar.com
-  type: trojan
-  udp: true
+  sni: vpn-tw-002.fastervpn.world
+  type: hysteria2
 - name: 🇺🇸 US 01
   network: ws
   port: 443
