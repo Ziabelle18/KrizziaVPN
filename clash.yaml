@@ -107,15 +107,13 @@ proxies:
   udp: true
   uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
 - name: 🇯🇵 JP 05
-  network: ws
-  port: 443
-  server: 104.21.55.123
-  servername: restless-boat-ebf2.moha102030.workers.dev
+  password: Mehdi1234
+  port: 2083
+  server: 172.64.144.251
   skip-cert-verify: false
-  tls: true
-  type: vless
+  sni: purple-recipe-5e30.cimavo4626.workers.dev
+  type: trojan
   udp: true
-  uuid: 95de071f-747c-dc07-36ac-5c0854a9e50e
 - name: 🇸🇬 SG 01
   network: ws
   port: 443
