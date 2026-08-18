@@ -136,7 +136,7 @@ proxies:
 - name: 🇸🇬 SG 02
   network: ws
   port: 443
-  server: 104.17.144.235
+  server: 104.16.158.249
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
@@ -146,7 +146,17 @@ proxies:
 - name: 🇸🇬 SG 03
   network: ws
   port: 443
-  server: 104.17.22.240
+  server: 104.16.251.148
+  servername: hhlfy.twiladaphne.ndjp.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+- name: 🇸🇬 SG 04
+  network: ws
+  port: 443
+  server: 104.17.144.235
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
@@ -155,7 +165,7 @@ proxies:
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬 SG 04
+  name: 🇸🇬 SG 05
   network: tcp
   port: 10000
   reality-opts:
@@ -167,16 +177,6 @@ proxies:
   type: vless
   udp: true
   uuid: af6904c1-4349-4448-8e99-0024824a0c33
-- name: 🇸🇬 SG 05
-  network: ws
-  port: 8443
-  server: 141.193.213.20
-  servername: speed.dulacloud.store
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
 - name: 🇹🇼 TW 01
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -230,7 +230,7 @@ proxies:
   name: 🇺🇸 US 03
   password: shadowsocks
   port: 443
-  server: 173.244.56.6
+  server: 173.244.56.9
   type: ss
   udp: true
 proxy-groups:
