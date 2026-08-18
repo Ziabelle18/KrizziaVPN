@@ -154,7 +154,7 @@ proxies:
 - name: 🇸🇬 SG 04
   network: ws
   port: 443
-  server: 104.17.144.235
+  server: 104.17.22.240
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
@@ -204,21 +204,18 @@ proxies:
   skip-cert-verify: true
   sni: ''
   type: hysteria2
-- name: 🇺🇸 US 01
-  network: ws
-  port: 443
-  server: wasmer-earth.jzy88.top
-  servername: wasmer-earth.jzy88.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 60156344-dbc3-4614-8177-fd337539a473
 - cipher: chacha20-ietf-poly1305
-  name: 🇺🇸 US 02
+  name: 🇺🇸 US 01
   password: G5p6ww4o67HB
   port: 8388
   server: 108.181.118.10
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 🇺🇸 US 02
+  password: shadowsocks
+  port: 443
+  server: 173.244.56.6
   type: ss
   udp: true
 - cipher: aes-128-gcm
