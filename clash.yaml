@@ -8,7 +8,16 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: 🇵🇭 PH 01
+- alterId: 0
+  cipher: auto
+  name: 🇵🇭 PH 01
+  network: ws
+  port: 80
+  server: 61.245.11.60
+  type: vmess
+  udp: true
+  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
+- name: 🇵🇭 PH 02
   password: 7e70223b-f331-41d5-9313-02b8d2df2885
   port: 20013
   server: 45.67.201.210
@@ -16,17 +25,21 @@ proxies:
   sni: hk.catxstar.com
   type: trojan
   udp: true
-- name: 🇵🇭 PH 02
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20063
-  server: 45.67.201.210
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 HK 01
+  network: ws
+  port: 443
+  server: n1747624260.4u9ma.icu
+  servername: n1747624260.4u9ma.icu
+  skip-cert-verify: false
+  tls: true
+  type: vmess
   udp: true
+  uuid: eee8cb72-7eab-4034-a308-ed06cb07e003
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 HK 01
+  name: 🇭🇰 HK 02
   network: tcp
   port: 59750
   reality-opts:
@@ -40,33 +53,26 @@ proxies:
   uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
 - alterId: 2
   cipher: auto
-  name: 🇭🇰 HK 02
+  name: 🇭🇰 HK 03
+  network: tcp
+  port: 30807
+  server: v10.hdacd.com
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰 HK 04
   network: tcp
   port: 30807
   server: v10.zgtfqs.click
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 🇭🇰 HK 03
+- name: 🇭🇰 HK 05
   password: 7e70223b-f331-41d5-9313-02b8d2df2885
   port: 20046
   server: 45.67.201.210
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-  udp: true
-- name: 🇭🇰 HK 04
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20098
-  server: 45.67.201.210
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-  udp: true
-- name: 🇭🇰 HK 05
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20010
-  server: d3.catcat321.com
   skip-cert-verify: true
   sni: hk.catxstar.com
   type: trojan
@@ -120,18 +126,15 @@ proxies:
   uuid: 55d61055-1a7f-4bc5-aca2-4ee78c738b60
 - name: 🇸🇬 SG 02
   network: ws
-  port: 443
-  server: 104.16.158.249
-  servername: hhlfy.twiladaphne.ndjp.net
-  skip-cert-verify: false
-  tls: true
+  port: 8880
+  server: 172.64.88.251
   type: vless
   udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  uuid: 7db9bcc1-78f1-455d-944b-3363b867e670
 - name: 🇸🇬 SG 03
   network: ws
   port: 443
-  server: 104.16.248.48
+  server: 104.16.158.249
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
@@ -141,7 +144,7 @@ proxies:
 - name: 🇸🇬 SG 04
   network: ws
   port: 443
-  server: 104.16.251.148
+  server: 104.16.248.48
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
@@ -151,7 +154,7 @@ proxies:
 - name: 🇸🇬 SG 05
   network: ws
   port: 443
-  server: 104.17.144.235
+  server: 104.16.251.148
   servername: hhlfy.twiladaphne.ndjp.net
   skip-cert-verify: false
   tls: true
