@@ -8,7 +8,16 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: 🇵🇭 PH 01
+- alterId: 0
+  cipher: auto
+  name: 🇵🇭 PH 01
+  network: ws
+  port: 80
+  server: 61.245.11.60
+  type: vmess
+  udp: true
+  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
+- name: 🇵🇭 PH 02
   password: 7e70223b-f331-41d5-9313-02b8d2df2885
   port: 20013
   server: 45.67.201.210
@@ -16,17 +25,21 @@ proxies:
   sni: hk.catxstar.com
   type: trojan
   udp: true
-- name: 🇵🇭 PH 02
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20063
-  server: 45.67.201.210
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 HK 01
+  network: ws
+  port: 443
+  server: n1747624260.4u9ma.icu
+  servername: n1747624260.4u9ma.icu
+  skip-cert-verify: false
+  tls: true
+  type: vmess
   udp: true
+  uuid: eee8cb72-7eab-4034-a308-ed06cb07e003
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 HK 01
+  name: 🇭🇰 HK 02
   network: tcp
   port: 59750
   reality-opts:
@@ -40,42 +53,29 @@ proxies:
   uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
 - alterId: 2
   cipher: auto
-  name: 🇭🇰 HK 02
+  name: 🇭🇰 HK 03
   network: tcp
   port: 30807
   server: v10.hdacd.com
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 HK 03
-  network: ws
-  port: 443
-  server: n1747624260.4u9ma.icu
-  servername: ''
-  skip-cert-verify: false
-  tls: true
-  type: vmess
+- cipher: chacha20-ietf
+  name: 🇭🇰 HK 04
+  password: asd123456
+  port: 8388
+  server: 103.149.182.79
+  type: ss
   udp: true
-  uuid: eee8cb72-7eab-4034-a308-ed06cb07e003
 - alterId: 2
   cipher: auto
-  name: 🇭🇰 HK 04
+  name: 🇭🇰 HK 05
   network: tcp
   port: 30807
   server: v10.zgtfqs.click
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 🇭🇰 HK 05
-  password: 7e70223b-f331-41d5-9313-02b8d2df2885
-  port: 20046
-  server: 45.67.201.210
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-  udp: true
 - cipher: aes-128-gcm
   name: 🇯🇵 JP 01
   password: shadowsocks
@@ -97,26 +97,32 @@ proxies:
   server: 149.22.87.204
   type: ss
   udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 JP 04
-  network: ws
-  port: 443
-  server: n1747624260.4u9ma.icu
-  servername: n1747624260.4u9ma.icu
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: eee8cb72-7eab-4034-a308-ed06cb07e003
-- name: 🇯🇵 JP 05
+- name: 🇯🇵 JP 04
   network: tcp
   port: 47878
   server: 152.69.195.67
   type: vless
   udp: true
   uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+- name: 🇯🇵 JP 05
+  password: tsuchiya
+  port: 443
+  server: 161.34.39.108
+  skip-cert-verify: false
+  sni: aa.ccmusic.jp
+  type: trojan
+  udp: true
 - name: 🇸🇬 SG 01
+  network: ws
+  port: 443
+  server: wasmer-earth.jzy88.top
+  servername: wasmer-earth.jzy88.top
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 60156344-dbc3-4614-8177-fd337539a473
+- name: 🇸🇬 SG 02
   network: tcp
   port: 443
   server: sahanwickramasinghevip.shop
@@ -126,13 +132,6 @@ proxies:
   type: vless
   udp: true
   uuid: 55d61055-1a7f-4bc5-aca2-4ee78c738b60
-- name: 🇸🇬 SG 02
-  network: ws
-  port: 8880
-  server: 172.64.88.251
-  type: vless
-  udp: true
-  uuid: 7db9bcc1-78f1-455d-944b-3363b867e670
 - name: 🇸🇬 SG 03
   network: ws
   port: 443
@@ -195,28 +194,25 @@ proxies:
   sni: tw.catxstar.com
   type: trojan
   udp: true
-- name: 🇺🇸 US 01
-  network: ws
-  port: 443
-  server: wasmer-earth.jzy88.top
-  servername: wasmer-earth.jzy88.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 60156344-dbc3-4614-8177-fd337539a473
 - cipher: chacha20-ietf-poly1305
-  name: 🇺🇸 US 02
+  name: 🇺🇸 US 01
   password: G5p6ww4o67HB
   port: 8388
   server: 108.181.118.10
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 🇺🇸 US 03
+  name: 🇺🇸 US 02
   password: shadowsocks
   port: 443
   server: 173.244.56.6
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 🇺🇸 US 03
+  password: shadowsocks
+  port: 443
+  server: 173.244.56.9
   type: ss
   udp: true
 proxy-groups:
